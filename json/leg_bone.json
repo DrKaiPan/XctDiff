@@ -1,0 +1,14 @@
+{
+  "training": [
+    {
+      "image": "images/1001.nii.gz",
+      "xray": "xray/1001.png"
+    }
+  ],
+    "validation": [
+    {
+      "image": "images/1001.nii.gz",
+      "xray": "xray/1001.png"
+    }
+  ]
+}

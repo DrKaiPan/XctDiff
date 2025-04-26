@@ -34,7 +34,7 @@ model:
 
 data:
   batch_size: 1
-  base_dir: /home/first/XctDiff/dataset
-  json_list: ["json/LIDC_IDRI.json"]
+  base_dir: /Users/kai/Library/CloudStorage/OneDrive-UTS/Projects/XctDiff/dataset  # was /home/first/XctDiff/dataset
+  json_list: ["json/leg_bone.json"] #["json/LIDC_IDRI.json"]
   num_workers: 8 # was 16
   pin_memory: True
