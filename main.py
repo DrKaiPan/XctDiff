@@ -85,7 +85,7 @@ if __name__ == '__main__':
         callbacks=callbacks,
         max_steps=hparams.max_steps,
         accelerator=accelerator,
-        accumulate_grad_batches=1,
+        accumulate_grad_batches=16, #was 1
     )
 
     trainer.fit(model, loader[0], loader[1])

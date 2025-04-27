@@ -112,8 +112,8 @@ class VQLPIPSWithDiscriminator(nn.Module):
         rec_loss = self.pixel_loss(inputs.contiguous(), reconstructions.contiguous())
 
         # Selects one random 2D image from each 3D Image
-        # frame_idx = torch.randint(0, D, [B]).cuda()
-        frame_idx = torch.randint(0, D, [B], device="cpu")
+        frame_idx = torch.randint(0, D, [B]).cuda()
+        # frame_idx = torch.randint(0, D, [B], device="cpu")
         frame_idx_selected = frame_idx.reshape(-1, 1, 1, 1, 1).repeat(1, C, 1, H, W)
         frames = torch.gather(inputs, 2, frame_idx_selected).squeeze(2)
         frames_recon = torch.gather(reconstructions, 2, frame_idx_selected).squeeze(2)
